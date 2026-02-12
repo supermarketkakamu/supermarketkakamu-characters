@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いちご様の真っ赤な本音</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="header-logo">
+            <a href="index.html?page=1">
+                <img src="images/logo.webp" alt="いちご様の真っ赤な本音">
+            </a>
+        </h1>
+
+        <div class="hamburger-btn" id="menu-open">
+            <span class="menu-text">MENU</span>
+            <div class="menu-bars">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu-overlay" id="menu-overlay">
+        <div class="menu-close" id="menu-close">
+            <div class="close-bars">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="menu-content">
+            <section class="menu-concept">
+                <h2 class="concept-lead">わかる、でも……<br>ちょっとキュンとする。</h2>
+                <p class="concept-main">
+                    練乳を拒む理由。歯に詰まる種の秘密。<br>
+                    あなたがいつも食べている「いちご」が。<br>
+                    もっと愛おしくなる4コマ。
+                </p>
+            </section>
+
+            <section class="menu-tags">
+                <div class="tag-title"> タイトル一覧 </div>
+                <div class="tag-container menu-tag-container"></div>
+            </section>
+        </div>
+    </nav>
+
+    <div id="cover-area"></div>
+
+    <main id="manga-list"></main>
+
+    <div class="bottom-nav">
+        <a href="#" class="nav-btn prev-btn" id="prev-btn">前のページ</a>
+        <a href="#" class="nav-btn next-btn" id="next-btn">次のページ</a>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <h2 class="footer-tag-title">タイトル一覧</h2>
+            <div class="tag-container footer-tag-container"></div>
+            
+            <nav class="footer-sub-nav">
+                <a href="../index.html">← 総合TOPへ戻る</a>
+            </nav>
+
+            <div class="container">
+                <nav class="footer-nav">
+                    <a href="/about.html">お問い合わせ</a>
+                    <a href="/privacy-policy.html">プライバシーポリシー</a>
+                </nav>
+            </div>
+
+            <p class="copyright">&copy; いちご様の真っ赤な本音</p>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

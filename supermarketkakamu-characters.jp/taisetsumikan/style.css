@@ -1,0 +1,171 @@
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    background-color: #ffffff;
+    margin: 0;
+    color: #963403;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 { margin: 10px 0 0; }
+
+#title {
+    text-decoration: none;
+    color: #963403;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #963403;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+#viewer { width: 100%; }
+
+/* --- アップル風：ふわっとアニメーション --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ---------------------------------- */
+
+/* 表紙：最大800pxで中央寄せ */
+.cover-section {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.cover-section .ehon-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    display: block;
+}
+
+/* 本編ページ：最大600pxで中央寄せ */
+.page-section {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 絵本画像：装飾なし */
+.ehon-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+}
+
+.ehon-text {
+    white-space: pre-wrap; 
+    margin-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+/* 広告エリア */
+.ad-section {
+    width: 100%;
+    margin: 80px 0;
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.ad-label {
+    font-size: 0.65rem;
+    color: #963403;
+    opacity: 0.6;
+    margin-bottom: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ad-rectangle {
+    width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ボタン（スマホ対応） */
+.nav-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 60px 15px 120px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-button {
+    flex: 1;
+    max-width: 200px;
+    display: inline-block;
+    padding: 18px 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.nav-button.next { background-color: #963403; color: #fff; }
+.nav-button.prev { background-color: #fff; color: #963403; border: 2px solid #963403; }
+.nav-button:hover { opacity: 0.8; }
+
+/* フッターデザイン */
+footer {
+    border-top: 1px solid #eee;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #963403;
+    text-decoration: none;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.footer-nav a:hover { opacity: 1; }
+
+.copyright {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin: 0;
+}
