@@ -12,7 +12,6 @@ async function displayManga() {
         const allManga = await mangaRes.json();
         const sortedList = [...allManga].sort((a, b) => parseInt(a.id) - parseInt(b.id));
 
-        // --- タイトル一覧生成 ---
         const menuTagContainer = document.querySelector('.menu-tag-container');
         const footerTagContainer = document.querySelector('.footer-tag-container');
         const containers = [menuTagContainer, footerTagContainer];
@@ -47,7 +46,6 @@ async function displayManga() {
             }
         });
 
-        // --- 表紙 ---
         const coverArea = document.getElementById('cover-area');
         if (page === 1) {
             coverArea.innerHTML = `<div class="manga-cover"><div class="cover-img-wrapper"><img src="images/000.webp" alt="表紙" class="manga-img"></div></div>`;
@@ -55,13 +53,11 @@ async function displayManga() {
             coverArea.innerHTML = "";
         }
 
-        // --- 漫画本体 & 広告 ---
         const list = document.getElementById('manga-list');
         list.innerHTML = "";
         const startIdx = (page - 1) * perPage;
         const currentItems = sortedList.slice(startIdx, startIdx + perPage);
 
-        // 広告データの読み込み
         const adsData = adsRes ? await adsRes.json() : { messages: ["……"], affiliates: [] };
         const adTexts = adsData.messages;
         const affiliates = adsData.affiliates;
@@ -79,10 +75,7 @@ async function displayManga() {
 
             if ((index + 1) % 2 === 0) {
                 const randomText = adTexts[Math.floor(Math.random() * adTexts.length)];
-                
-                // 現在の広告が全話の中で何番目か計算
                 const adSlotIndex = ( (page - 1) * (perPage / 2) ) + ( (index + 1) / 2 - 1 );
-                // 配列の数を超えたらループするように取得
                 const adTag = affiliates.length > 0 ? affiliates[adSlotIndex % affiliates.length].html : "";
 
                 html += `
