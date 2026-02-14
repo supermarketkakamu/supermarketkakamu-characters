@@ -1,7 +1,36 @@
-[
-  "……休憩。",
-  "ちょっと一休みよ。",
-  "大人の事情ってやつね。",
-  "（お茶でも飲めば？）",
-  "……ふーん。"
-]
+{
+  "messages": [
+    "……休憩。",
+    "ちょっと一休みよ。",
+    "大人の事情ってやつね。",
+    "（お茶でも飲めば？）",
+    "（スルーしていいわよ）",
+    "ふーん。"
+  ],
+  "affiliates": [
+    {
+      "id": "strawberry-01",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9d12e.df23862c.50f9d12f.cd1eb016/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff406091-aka%2F3w13-01%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9d12e.df23862c.50f9d12f.cd1eb016/?me_id=1338652&item_id=10000832&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ff406091-aka%2Fcabinet%2F09068689%2Fimgrc0107911373.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    },
+    {
+      "id": "strawberry-02",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9da27.57624932.50f9da28.0cd1d852/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff405221-oki%2Far003%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9da27.57624932.50f9da28.0cd1d852/?me_id=1360889&item_id=10001734&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ff405221-oki%2Fcabinet%2Fcb%2Fcb223sku_c.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    },
+    {
+      "id": "strawberry-03",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9dbae.f7a1d554.50f9dbaf.b6356518/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmonmiya%2F70005611%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9dbae.f7a1d554.50f9dbaf.b6356518/?me_id=1295909&item_id=10005010&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmonmiya%2Fcabinet%2Fm3%2F70005611.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    },
+    {
+      "id": "strawberry-04",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9e4a1.5a48c0f5.50f9e4a2.a7b5b13a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fikedaseika%2Fdxichigo-4pp%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9e4a1.5a48c0f5.50f9e4a2.a7b5b13a/?me_id=1398699&item_id=10000066&pc=https%3A%2F%2Fimage.rakuten.co.jp%2Fikedaseika%2Fcabinet%2Fcompass1646830107.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    },
+    {
+      "id": "strawberry-05",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9e579.1870c1d6.50f9e57a.aaac5602/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff092142-sakura%2F8843-30041641%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9e579.1870c1d6.50f9e57a.aaac5602/?me_id=1330727&item_id=10000312&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ff092142-sakura%2Fcabinet%2Fusui%2F8843-30055471-01b.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    },
+    {
+      "id": "strawberry-06",
+      "html": "<a href=\"https://hb.afl.rakuten.co.jp/ichiba/50f9e608.ad64b97f.50f9e609.ff367a1e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ff403458-shingu%2Fa424%2F&link_type=pict&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/50f9e608.ad64b97f.50f9e609.ff367a1e/?me_id=1357954&item_id=10000756&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ff403458-shingu%2Fcabinet%2F06153915%2F1.jpg%3F_ex%3D300x300&s=300x300&t=pict\" border=\"0\" style=\"margin:2px\" alt=\"\" title=\"\"></a>"
+    }
+  ]
+}

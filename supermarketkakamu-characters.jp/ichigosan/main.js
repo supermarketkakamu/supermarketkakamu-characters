@@ -12,6 +12,7 @@ async function displayManga() {
         const allManga = await mangaRes.json();
         const sortedList = [...allManga].sort((a, b) => parseInt(a.id) - parseInt(b.id));
 
+        // --- タイトル一覧生成 ---
         const menuTagContainer = document.querySelector('.menu-tag-container');
         const footerTagContainer = document.querySelector('.footer-tag-container');
         const containers = [menuTagContainer, footerTagContainer];
@@ -30,17 +31,13 @@ async function displayManga() {
                         const totalIndex = sortedList.findIndex(m => m.id === item.id);
                         const targetPage = Math.floor(totalIndex / perPage) + 1;
                         const targetId = `manga-${item.id}`;
-                        
                         const menuOverlay = document.getElementById('menu-overlay');
                         if (menuOverlay) {
                             menuOverlay.classList.remove('is-open');
                             document.body.classList.remove('no-scroll');
                         }
-                        
                         if (page === targetPage) {
-                            setTimeout(() => {
-                                scrollToTarget(targetId);
-                            }, 450); 
+                            setTimeout(() => { scrollToTarget(targetId); }, 450); 
                         } else {
                             window.location.href = `index.html?page=${targetPage}#${targetId}`;
                         }
@@ -50,6 +47,7 @@ async function displayManga() {
             }
         });
 
+        // --- 表紙 ---
         const coverArea = document.getElementById('cover-area');
         if (page === 1) {
             coverArea.innerHTML = `<div class="manga-cover"><div class="cover-img-wrapper"><img src="images/000.webp" alt="表紙" class="manga-img"></div></div>`;
@@ -57,14 +55,16 @@ async function displayManga() {
             coverArea.innerHTML = "";
         }
 
+        // --- 漫画本体 & 広告 ---
         const list = document.getElementById('manga-list');
         list.innerHTML = "";
         const startIdx = (page - 1) * perPage;
-        const endIdx = startIdx + perPage;
-        const currentItems = sortedList.slice(startIdx, endIdx);
+        const currentItems = sortedList.slice(startIdx, startIdx + perPage);
 
-        let adTexts = ["……"]; 
-        if (adsRes) adTexts = await adsRes.json();
+        // 広告データの読み込み
+        const adsData = adsRes ? await adsRes.json() : { messages: ["……"], affiliates: [] };
+        const adTexts = adsData.messages;
+        const affiliates = adsData.affiliates;
 
         currentItems.forEach((item, index) => {
             const displayId = parseInt(item.id).toString().padStart(2, '0');
@@ -79,6 +79,12 @@ async function displayManga() {
 
             if ((index + 1) % 2 === 0) {
                 const randomText = adTexts[Math.floor(Math.random() * adTexts.length)];
+                
+                // 現在の広告が全話の中で何番目か計算
+                const adSlotIndex = ( (page - 1) * (perPage / 2) ) + ( (index + 1) / 2 - 1 );
+                // 配列の数を超えたらループするように取得
+                const adTag = affiliates.length > 0 ? affiliates[adSlotIndex % affiliates.length].html : "";
+
                 html += `
                     <div class="ad-section">
                         <div class="ad-inner">
@@ -87,7 +93,9 @@ async function displayManga() {
                                 <div class="balloon">${randomText}</div>
                             </div>
                             <div class="ad-label">advertising</div>
-                            <div class="ad-dummy-box">Sponsored</div>
+                            <div class="ad-rakuten-box">
+                                ${adTag}
+                            </div>
                         </div>
                     </div>`;
             }
@@ -109,7 +117,7 @@ async function displayManga() {
         } else {
             prevBtn.style.display = "none";
         }
-        if (endIdx < sortedList.length) {
+        if (startIdx + perPage < sortedList.length) {
             nextBtn.href = `index.html?page=${page + 1}`;
             nextBtn.style.display = "inline-block";
             nextBtn.style.width = (page === 1) ? "80%" : "48%";
