@@ -3,9 +3,15 @@ async function loadStory() {
     const titleEl = document.getElementById('title');
 
     try {
-        const res = await fetch('data.json');
-        if (!res.ok) throw new Error('JSON load failed');
-        const data = await res.json();
+        // 物語データと広告データを同時に読み込む
+        const [storyRes, adsRes] = await Promise.all([
+            fetch('data.json'),
+            fetch('ads.json').catch(() => null)
+        ]);
+
+        if (!storyRes.ok) throw new Error('Story JSON failed');
+        const data = await storyRes.json();
+        const adsData = adsRes ? await adsRes.json() : { affiliates: [] };
         
         titleEl.textContent = data.story_title;
         document.title = data.story_title + " | SUPERMARKET KAKAMU";
@@ -34,7 +40,7 @@ async function loadStory() {
             }
         }
 
-        // 本編
+        // 本編と広告の生成
         displayPages.forEach((page, index) => {
             const sec = document.createElement('section');
             sec.className = 'page-section';
@@ -44,10 +50,21 @@ async function loadStory() {
             `;
             viewer.appendChild(sec);
 
-            if ((index + 1) % 3 === 0) {
+            // 3枚ごとに広告を挿入
+            const currentPosition = index + 1;
+            if (currentPosition % 3 === 0) {
+                // 広告のインデックスを計算 (10個を順番にループ)
+                const adSlotNum = ((currentPage - 1) * (perPage / 3)) + (currentPosition / 3 - 1);
+                const adContent = adsData.affiliates.length > 0 
+                    ? adsData.affiliates[adSlotNum % adsData.affiliates.length].html 
+                    : "広告枠";
+
                 const ad = document.createElement('div');
                 ad.className = 'ad-section fade-in';
-                ad.innerHTML = `<div class="ad-label">Advertising</div><div class="ad-rectangle"></div>`;
+                ad.innerHTML = `
+                    <div class="ad-label">advertising</div>
+                    <div class="ad-rectangle">${adContent}</div>
+                `;
                 viewer.appendChild(ad);
             }
         });
