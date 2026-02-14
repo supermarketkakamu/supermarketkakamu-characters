@@ -53,7 +53,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 35px;
-    height: 70px; /* バーの高さを少し余裕を持たせて確保 */
+    height: 70px; /* PCでの高さ */
 }
 
 .logo-container {
@@ -165,10 +165,11 @@ footer {
     }
     .bar-inner {
         justify-content: center; /* ロゴをセンターに */
-        padding: 0;
-        height: 60px; /* SPでもロゴが大きく入るように高さを維持 */
+        padding: 10px 0;         /* 上下に余白をとってはみ出し防止 */
+        height: auto;            /* 高さを中身に合わせる */
+        min-height: 50px;
     }
     .floating-logo {
-        height: 32px; /* SPではロゴサイズを大きく保つ */
+        height: 35px;            /* SPではロゴを大きく保つ */
     }
 }
