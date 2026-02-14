@@ -1,10 +1,5 @@
-/* SUPERMARKET KAKAMU 共通スタイルシート
-   1. Zen 丸ゴシックを採用
-   2. スーパーらしい赤 (#e60012) をメインカラーに設定
-   3. モバイルフレンドリーなレスポンシブ設計
-*/
+/* SUPERMARKET KAKAMU 共通スタイルシート */
 
-/* 全体の基本設定 */
 html {
     scroll-behavior: smooth;
 }
@@ -14,45 +9,65 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #fcfaf2; /* 優しいクリーム色 */
+    background-color: #fcfaf2; 
     line-height: 1.8;
 }
 
+/* サイトの基本幅：1000px */
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ヘッダーデザイン */
-header {
-    background-color: #e60012; /* カカム・レッド */
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-    border-bottom: 6px solid #b3000e;
+/* メインビジュアル設定 */
+.main-visual {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 900;
-    letter-spacing: 0.1em;
+.kv-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-header h1 a {
-    color: #fff;
-    text-decoration: none;
+/* KVの上に浮く横長バー */
+.kv-logo-bar {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    box-sizing: border-box;
 }
 
-header p {
-    margin: 10px 0 0;
-    font-weight: 700;
-    opacity: 0.9;
-    font-size: 1rem;
+/* バーの内側のレイアウト設定（PC：左寄せ） */
+.bar-inner {
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    height: 70px; /* バーの高さを少し余裕を持たせて確保 */
 }
 
-/* TOPページ：キャラクターカードのグリッド */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.floating-logo {
+    height: 28px; /* PCでは控えめなサイズ */
+    width: auto;
+    display: block;
+}
+
+/* キャラクターグリッド */
 .character-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -77,7 +92,6 @@ header p {
     flex-direction: column;
 }
 
-/* ホバー時に浮き上がり、枠線が赤くなる */
 .card-link:hover .card {
     transform: translateY(-8px);
     border-color: #e60012;
@@ -86,10 +100,9 @@ header p {
 
 .card-image img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 正方形を維持 */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    background-color: #eee;
 }
 
 .card-body {
@@ -107,118 +120,55 @@ header p {
 .card-body p {
     font-size: 0.95rem;
     color: #666;
-    margin-bottom: 20px;
 }
 
 .more-text {
     font-weight: 700;
     color: #e60012;
-    font-size: 0.9rem;
-    display: block;
     text-align: right;
+    display: block;
 }
 
-/* 固定ページ（About/Policy/Contact）共通スタイル */
+/* 固定ページ共通 */
 .content-page {
     background: #fff;
     margin: 40px auto 80px;
     padding: 40px;
     border-radius: 16px;
     border: 1px solid #eee;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-}
-
-.content-page h2 {
-    color: #e60012;
-    font-size: 1.8rem;
-    border-bottom: 3px solid #e60012;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    font-weight: 900;
-}
-
-.content-page h3 {
-    margin-top: 40px;
-    border-left: 6px solid #e60012;
-    padding-left: 15px;
-    font-size: 1.25rem;
-    color: #333;
-    font-weight: 700;
-}
-
-.content-page p {
-    margin-bottom: 20px;
-}
-
-.content-page ul {
-    background: #fff9f9;
-    padding: 20px 20px 20px 45px;
-    border-radius: 10px;
-    border: 1px dashed #ffb7b7;
-}
-
-.content-page li {
-    margin-bottom: 10px;
-}
-
-/* SNS/コンタクトボタン */
-.contact-links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 25px;
-}
-
-.contact-links a {
-    text-decoration: none;
-    color: #e60012;
-    border: 2px solid #e60012;
-    padding: 10px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 0.95rem;
-    transition: all 0.3s;
-}
-
-.contact-links a:hover {
-    background: #e60012;
-    color: #fff;
 }
 
 /* フッター */
 footer {
     background-color: #fff;
-    border-top: 1px solid #eee;
     padding: 60px 0;
     text-align: center;
-}
-
-.footer-nav {
-    margin-bottom: 25px;
 }
 
 .footer-nav a {
     margin: 0 15px;
     color: #888;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.footer-nav a:hover {
-    color: #e60012;
-    text-decoration: underline;
 }
 
 .copyright {
-    font-size: 0.8rem;
     color: #bbb;
+    font-size: 0.8rem;
 }
 
-/* レスポンシブ調整 */
-@media (max-width: 600px) {
-    header { padding: 40px 0; }
-    header h1 { font-size: 1.6rem; }
-    .content-page { padding: 25px; margin-top: 20px; }
-    .footer-nav a { display: block; margin: 10px 0; }
+/* スマホ用の調整 */
+@media (max-width: 768px) {
+    .kv-logo-bar {
+        top: 15px;
+        width: calc(100% - 30px);
+        border-radius: 40px;
+    }
+    .bar-inner {
+        justify-content: center; /* ロゴをセンターに */
+        padding: 0;
+        height: 60px; /* SPでもロゴが大きく入るように高さを維持 */
+    }
+    .floating-logo {
+        height: 32px; /* SPではロゴサイズを大きく保つ */
+    }
 }
